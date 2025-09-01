@@ -116,7 +116,7 @@ const UserProfilePage = () => {
     
     // Simulate API call
     setTimeout(() => {
-      console.log('Updating profile:', formData)
+      // console.log('Updating profile:', formData)
       setSaving(false)
       // Show success message or redirect
     }, 1000)
@@ -133,7 +133,7 @@ const UserProfilePage = () => {
     
     // Simulate API call
     setTimeout(() => {
-      console.log('Updating password')
+      // console.log('Updating password')
       setSaving(false)
       setChangePassword(false)
       setPasswordData({

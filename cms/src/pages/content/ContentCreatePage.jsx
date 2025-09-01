@@ -28,7 +28,7 @@ const ContentCreatePage = () => {
     
     // Simulate API call
     setTimeout(() => {
-      console.log('Creating content:', formData)
+      // console.log('Creating content:', formData)
       setLoading(false)
       navigate('/content')
     }, 1000)

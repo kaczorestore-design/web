@@ -69,7 +69,7 @@ const UserCreatePage = () => {
     
     // Simulate API call
     setTimeout(() => {
-      console.log('Creating user:', { ...formData, password: '[HIDDEN]' })
+      // console.log('Creating user:', { ...formData, password: '[HIDDEN]' })
       setLoading(false)
       navigate('/users')
     }, 1000)

@@ -154,7 +154,7 @@ const EmergencyRadiology = () => {
               className="relative"
             >
               <img
-                src="/src/assets/images/emergency-radiology.svg"
+                src="/images/emergency-radiology.svg"
                 alt="Emergency radiology"
                 className="rounded-2xl shadow-2xl"
               />
@@ -360,7 +360,7 @@ const EmergencyRadiology = () => {
               viewport={{ once: true }}
             >
               <img
-                src="/src/assets/images/emergency-radiology.svg"
+                src="/images/emergency-radiology.svg"
                 alt="Emergency radiology workflow"
                 className="rounded-2xl shadow-xl"
               />

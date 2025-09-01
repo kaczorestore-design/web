@@ -177,7 +177,7 @@ const AdvancedDiscovery = () => {
               className="relative"
             >
               <img
-                src="/src/assets/images/advanced-discovery.svg"
+                src="/images/advanced-discovery.svg"
                 alt="Advanced discovery"
                 className="rounded-2xl shadow-2xl"
               />
@@ -426,7 +426,7 @@ const AdvancedDiscovery = () => {
               viewport={{ once: true }}
             >
               <img
-                src="/src/assets/images/advanced-discovery.svg"
+                src="/images/advanced-discovery.svg"
                 alt="Discovery benefits"
                 className="rounded-2xl shadow-xl"
               />

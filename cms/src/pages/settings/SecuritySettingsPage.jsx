@@ -60,7 +60,7 @@ const SecuritySettingsPage = () => {
         ]
       })
       
-      console.log('Security settings loaded')
+      // console.log('Security settings loaded')
     } catch (error) {
       console.error('Error loading security settings:', error)
     } finally {
@@ -96,7 +96,7 @@ const SecuritySettingsPage = () => {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500))
-      console.log('Password changed successfully')
+      // console.log('Password changed successfully')
       
       // Clear password fields
       setSecurity(prev => ({
@@ -124,7 +124,7 @@ const SecuritySettingsPage = () => {
       const newStatus = !security.twoFactorEnabled
       setSecurity(prev => ({ ...prev, twoFactorEnabled: newStatus }))
       
-      console.log(`Two-factor authentication ${newStatus ? 'enabled' : 'disabled'}`)
+      // console.log(`Two-factor authentication ${newStatus ? 'enabled' : 'disabled'}`)
       alert(`Two-factor authentication ${newStatus ? 'enabled' : 'disabled'} successfully!`)
     } catch (error) {
       console.error('Error toggling 2FA:', error)
@@ -228,7 +228,7 @@ const SecuritySettingsPage = () => {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500))
-      console.log('Security settings saved:', security)
+      // console.log('Security settings saved:', security)
       setSaved(true)
       setTimeout(() => setSaved(false), 3000)
     } catch (error) {

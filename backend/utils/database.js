@@ -6,7 +6,7 @@ const connectDB = async () => {
   try {
     // Test the connection
     await sequelize.authenticate()
-    console.log('PostgreSQL Connected successfully')
+    // console.log('PostgreSQL Connected successfully')
     
     // Import models to register them with sequelize
     require('../models/User')
@@ -15,7 +15,7 @@ const connectDB = async () => {
     
     // Sync models with database
     await sequelize.sync({ alter: process.env.NODE_ENV === 'development' })
-    console.log('Database models synchronized')
+    // console.log('Database models synchronized')
     
     return sequelize
   } catch (error) {
@@ -29,7 +29,7 @@ const disconnectDB = async () => {
   try {
     if (sequelize) {
       await sequelize.close()
-      console.log('PostgreSQL connection closed')
+      // console.log('PostgreSQL connection closed')
     }
   } catch (error) {
     console.error('Error closing PostgreSQL connection:', error)
@@ -231,7 +231,7 @@ const validateDocument = async (Model, data, options = {}) => {
 // Create indexes (handled by Sequelize model definitions)
 const createIndexes = async () => {
   try {
-    console.log('Indexes are managed by Sequelize model definitions')
+    // console.log('Indexes are managed by Sequelize model definitions')
     return { success: true, message: 'Indexes managed by Sequelize' }
   } catch (error) {
     throw new Error(`Index creation error: ${error.message}`)
@@ -278,7 +278,7 @@ const cleanupExpiredTokens = async () => {
     //   }
     // })
     
-    console.log('Token cleanup completed')
+    // console.log('Token cleanup completed')
     return { success: true, message: 'Expired tokens cleaned up' }
   } catch (error) {
     throw new Error(`Token cleanup error: ${error.message}`)
@@ -293,7 +293,7 @@ const cleanupOldSessions = async (daysOld = 30) => {
     cutoffDate.setDate(cutoffDate.getDate() - daysOld)
     
     // This would depend on your session model structure
-    console.log(`Session cleanup completed for sessions older than ${daysOld} days`)
+    // console.log(`Session cleanup completed for sessions older than ${daysOld} days`)
     return { success: true, message: 'Old sessions cleaned up' }
   } catch (error) {
     throw new Error(`Session cleanup error: ${error.message}`)
@@ -303,7 +303,7 @@ const cleanupOldSessions = async (daysOld = 30) => {
 // Create backup (PostgreSQL specific)
 const createBackup = async (tables = ['users', 'contents', 'contacts']) => {
   try {
-    console.log('PostgreSQL backup should be handled by pg_dump utility')
+    // console.log('PostgreSQL backup should be handled by pg_dump utility')
     return {
       success: true,
       message: 'Use pg_dump for PostgreSQL backups',
@@ -329,7 +329,7 @@ const getSlowQueries = async () => {
     return slowQueries
   } catch (error) {
     // pg_stat_statements extension might not be enabled
-    console.log('pg_stat_statements extension not available')
+    // console.log('pg_stat_statements extension not available')
     return []
   }
 }

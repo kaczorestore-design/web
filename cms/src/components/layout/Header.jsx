@@ -56,7 +56,7 @@ const Header = () => {
     e.preventDefault()
     if (searchQuery.trim()) {
       // Implement search functionality
-      console.log('Searching for:', searchQuery)
+      // console.log('Searching for:', searchQuery)
     }
   }
 

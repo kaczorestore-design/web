@@ -44,7 +44,7 @@ const ContentEditPage = () => {
     
     // Simulate API call
     setTimeout(() => {
-      console.log('Updating content:', formData)
+      // console.log('Updating content:', formData)
       setSaving(false)
       navigate('/content')
     }, 1000)

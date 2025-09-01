@@ -104,7 +104,7 @@ const NighttimeCoverage = () => {
               className="relative"
             >
               <img
-                src="/src/assets/images/nighttime-coverage.svg"
+                src="/images/nighttime-coverage.svg"
                 alt="Emergency radiology coverage"
                 className="rounded-2xl shadow-2xl"
               />
@@ -177,7 +177,7 @@ const NighttimeCoverage = () => {
               viewport={{ once: true }}
             >
               <img
-                src="/src/assets/images/nighttime-coverage.svg"
+                src="/images/nighttime-coverage.svg"
                 alt="Radiology workflow"
                 className="rounded-2xl shadow-xl"
               />

@@ -131,16 +131,16 @@ const ConsultationPopup = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 p-4">
-      <div className="bg-white text-gray-900 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-xl border">
+      <div className="bg-gray-900 text-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-xl border border-gray-700">
         <div className="p-6">
           {/* Header */}
           <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-bold text-primary-600">
+            <h2 className="text-2xl font-bold text-cyan-400">
               Request a Teleradiology Or A Radiology Reading Quote
             </h2>
             <button
               onClick={onClose}
-              className="text-gray-500 hover:text-gray-700 transition-colors"
+              className="text-gray-400 hover:text-white transition-colors"
             >
               <X className="w-6 h-6" />
             </button>
@@ -165,7 +165,7 @@ const ConsultationPopup = ({ isOpen, onClose }) => {
                   value={formData.name}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-3 py-2 bg-white text-black rounded border focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                  className="w-full px-3 py-2 bg-gray-800 text-white rounded border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                 />
               </div>
               <div>
@@ -178,7 +178,7 @@ const ConsultationPopup = ({ isOpen, onClose }) => {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-3 py-2 bg-white text-black rounded border focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                  className="w-full px-3 py-2 bg-gray-800 text-white rounded border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                 />
               </div>
             </div>
@@ -195,7 +195,7 @@ const ConsultationPopup = ({ isOpen, onClose }) => {
                   value={formData.contactNo}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-3 py-2 bg-white text-black rounded border focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                  className="w-full px-3 py-2 bg-gray-800 text-white rounded border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                 />
               </div>
               <div>
@@ -208,7 +208,7 @@ const ConsultationPopup = ({ isOpen, onClose }) => {
                   value={formData.companyName}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-3 py-2 bg-white text-black rounded border focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                  className="w-full px-3 py-2 bg-gray-800 text-white rounded border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                 />
               </div>
             </div>
@@ -225,7 +225,7 @@ const ConsultationPopup = ({ isOpen, onClose }) => {
                   value={formData.state}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-3 py-2 bg-white text-black rounded border focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                  className="w-full px-3 py-2 bg-gray-800 text-white rounded border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                 />
               </div>
               <div>
@@ -237,7 +237,7 @@ const ConsultationPopup = ({ isOpen, onClose }) => {
                   value={formData.country}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-3 py-2 bg-white text-black rounded border focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                  className="w-full px-3 py-2 bg-gray-800 text-white rounded border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                 >
                   <option value="">- Select Country -</option>
                   <option value="United States">United States</option>
@@ -264,7 +264,7 @@ const ConsultationPopup = ({ isOpen, onClose }) => {
                   value={formData.typeOfFacility}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-3 py-2 bg-white text-black rounded border focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                  className="w-full px-3 py-2 bg-gray-800 text-white rounded border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                 >
                   <option value="">--Select--</option>
                   <option value="Hospital">Hospital</option>
@@ -285,7 +285,7 @@ const ConsultationPopup = ({ isOpen, onClose }) => {
                   value={formData.estimatedReadsAnnually}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-3 py-2 bg-white text-black rounded border focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                  className="w-full px-3 py-2 bg-gray-800 text-white rounded border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                 />
               </div>
             </div>
@@ -314,7 +314,7 @@ const ConsultationPopup = ({ isOpen, onClose }) => {
                       name={key}
                       checked={formData.typesOfReads[key]}
                       onChange={handleCheckboxChange}
-                      className="w-4 h-4 text-cyan-400 bg-white border-gray-300 rounded focus:ring-cyan-400"
+                      className="w-4 h-4 text-cyan-400 bg-gray-800 border-gray-600 rounded focus:ring-cyan-400"
                     />
                     <span className="text-sm">{label}</span>
                   </label>
@@ -333,7 +333,7 @@ const ConsultationPopup = ({ isOpen, onClose }) => {
                 value={formData.requestCallBack}
                 onChange={handleInputChange}
                 required
-                className="w-full px-3 py-2 bg-white text-black rounded border focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                className="w-full px-3 py-2 bg-gray-800 text-white rounded border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-400"
               />
             </div>
 
@@ -345,7 +345,7 @@ const ConsultationPopup = ({ isOpen, onClose }) => {
                 checked={formData.consentGiven}
                 onChange={handleCheckboxChange}
                 required
-                className="w-4 h-4 text-cyan-400 bg-white border-gray-300 rounded focus:ring-cyan-400 mt-1"
+                className="w-4 h-4 text-cyan-400 bg-gray-800 border-gray-600 rounded focus:ring-cyan-400 mt-1"
               />
               <label className="text-white text-sm">
                 By submitting this web form, I grant permission for Teleradiology Solutions to contact me via email or phone.

@@ -347,17 +347,6 @@ const cleanupOldFiles = async (folderPath, maxAge = 7 * 24 * 60 * 60 * 1000) => 
 }
 
 // Test Cloudinary connection
-const testCloudinaryConnection = async () => {
-  try {
-    await cloudinary.api.ping()
-    // console.log('Cloudinary connection successful')
-    return true
-  } catch (error) {
-    console.error('Cloudinary connection failed:', error)
-    return false
-  }
-}
-
 module.exports = {
   createUploadMiddleware,
   uploadToCloudinary,
@@ -367,7 +356,6 @@ module.exports = {
   validateFile,
   generateSecureUrl,
   cleanupOldFiles,
-  testCloudinaryConnection,
   fileConfigs,
   cloudinary
 }

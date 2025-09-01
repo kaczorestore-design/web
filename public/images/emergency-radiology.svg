@@ -1,0 +1,60 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="emergencyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#DC2626;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#991B1B;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#emergencyGradient)"/>
+  
+  <!-- Emergency cross -->
+  <g transform="translate(400, 300)">
+    <circle cx="0" cy="0" r="80" fill="white" opacity="0.9"/>
+    <rect x="-40" y="-10" width="80" height="20" fill="#DC2626"/>
+    <rect x="-10" y="-40" width="20" height="80" fill="#DC2626"/>
+  </g>
+  
+  <!-- Ambulance outline -->
+  <g transform="translate(150, 450)" stroke="white" stroke-width="3" fill="none" opacity="0.8">
+    <rect x="0" y="0" width="120" height="60" rx="8"/>
+    <rect x="100" y="10" width="40" height="40" rx="4"/>
+    <circle cx="25" cy="70" r="12" stroke-width="2"/>
+    <circle cx="95" cy="70" r="12" stroke-width="2"/>
+    
+    <!-- Emergency lights -->
+    <rect x="10" y="-10" width="8" height="8" fill="#EF4444" opacity="0.9"/>
+    <rect x="25" y="-10" width="8" height="8" fill="#3B82F6" opacity="0.9"/>
+  </g>
+  
+  <!-- Heart monitor -->
+  <g transform="translate(500, 150)">
+    <rect x="0" y="0" width="200" height="120" rx="12" fill="#1F2937" stroke="white" stroke-width="2"/>
+    <rect x="10" y="10" width="180" height="80" fill="#000000"/>
+    
+    <!-- ECG line -->
+    <path d="M20 50 L40 50 L50 30 L60 70 L70 20 L80 80 L90 50 L110 50 L120 45 L140 55 L160 50 L180 50" 
+          stroke="#10B981" stroke-width="2" fill="none"/>
+    
+    <!-- Vital signs -->
+    <text x="20" y="110" fill="white" font-size="12" font-family="monospace">HR: 85 BPM</text>
+    <text x="120" y="110" fill="white" font-size="12" font-family="monospace">BP: 120/80</text>
+  </g>
+  
+  <!-- Emergency alert indicators -->
+  <g fill="#FBBF24" opacity="0.8">
+    <polygon points="100,100 110,120 90,120" transform="rotate(0 100 110)"/>
+    <polygon points="700,500 710,520 690,520" transform="rotate(45 700 510)"/>
+    <polygon points="150,200 160,220 140,220" transform="rotate(-30 150 210)"/>
+  </g>
+  
+  <!-- Clock showing 24/7 -->
+  <g transform="translate(650, 100)">
+    <circle cx="0" cy="0" r="40" fill="white" stroke="#DC2626" stroke-width="3"/>
+    <text x="-15" y="5" fill="#DC2626" font-size="16" font-weight="bold">24/7</text>
+    
+    <!-- Clock hands -->
+    <line x1="0" y1="0" x2="0" y2="-25" stroke="#DC2626" stroke-width="2"/>
+    <line x1="0" y1="0" x2="15" y2="0" stroke="#DC2626" stroke-width="2"/>
+    <circle cx="0" cy="0" r="3" fill="#DC2626"/>
+  </g>
+</svg>

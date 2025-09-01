@@ -256,7 +256,7 @@ const ServicesListPage = () => {
                           Edit
                         </Link>
                         <button
-                          onClick={() => console.log('Delete service:', service.id)}
+                          onClick={() => {/* Delete service: ${service.id} */}}
                           className={`flex-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                             theme === 'dark' 
                               ? 'bg-red-600 hover:bg-red-700 text-white' 

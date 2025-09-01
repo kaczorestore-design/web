@@ -189,7 +189,7 @@ const IntelligentWorkflow = () => {
               className="relative"
             >
               <img
-                src="/src/assets/images/intelligent-workflow.svg"
+                src="/images/intelligent-workflow.svg"
                 alt="Intelligent workflow"
                 className="rounded-2xl shadow-2xl"
               />
@@ -435,7 +435,7 @@ const IntelligentWorkflow = () => {
               viewport={{ once: true }}
             >
               <img
-                src="/src/assets/images/intelligent-workflow.svg"
+                src="/images/intelligent-workflow.svg"
                 alt="Workflow benefits"
                 className="rounded-2xl shadow-xl"
               />

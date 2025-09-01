@@ -64,7 +64,7 @@ const AboutPage = () => {
               viewport={{ once: true }}
             >
               <img
-                src="/src/assets/images/doctors-reviewing-scans.jpg"
+                src="/images/doctors-reviewing-scans.jpg"
                 alt="Medical team"
                 className="rounded-xl shadow-lg"
               />

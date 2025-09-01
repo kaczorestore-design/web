@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "vercel-build": "vite build",
+    "deploy:help": "node deploy.js"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.7",

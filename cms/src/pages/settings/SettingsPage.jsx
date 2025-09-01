@@ -42,7 +42,7 @@ const SettingsPage = () => {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000))
       // Settings would be loaded from API here
-      console.log('Settings loaded')
+      // console.log('Settings loaded')
     } catch (error) {
       console.error('Error loading settings:', error)
     } finally {
@@ -102,7 +102,7 @@ const SettingsPage = () => {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500))
-      console.log('Settings saved:', settings)
+      // console.log('Settings saved:', settings)
       setSaved(true)
       setTimeout(() => setSaved(false), 3000)
     } catch (error) {

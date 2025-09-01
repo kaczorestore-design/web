@@ -15,7 +15,7 @@ const BlogPage = () => {
       date: '2024-01-15',
       category: 'AI & Technology',
       readTime: '8 min read',
-      image: '/src/assets/images/hero-medical.svg',
+      image: '/images/hero-medical.svg',
       tags: ['AI', 'Machine Learning', 'Medical Imaging', 'Future Tech']
     },
     {
@@ -26,7 +26,7 @@ const BlogPage = () => {
       date: '2024-01-12',
       category: 'Compliance',
       readTime: '6 min read',
-      image: '/src/assets/images/3d-brain-scan.svg',
+      image: '/images/3d-brain-scan.svg',
       tags: ['HIPAA', 'Compliance', 'Security', 'Healthcare']
     },
     {
@@ -37,7 +37,7 @@ const BlogPage = () => {
       date: '2024-01-10',
       category: 'Case Studies',
       readTime: '10 min read',
-      image: '/src/assets/images/emergency-radiology.svg',
+      image: '/images/emergency-radiology.svg',
       tags: ['Case Study', 'Efficiency', 'ROI', 'Implementation']
     },
     {
@@ -48,7 +48,7 @@ const BlogPage = () => {
       date: '2024-01-08',
       category: 'Technical',
       readTime: '12 min read',
-      image: '/src/assets/images/quality-assurance.svg',
+      image: '/images/quality-assurance.svg',
       tags: ['PACS', 'Integration', 'Technical', 'Workflow']
     },
     {
@@ -59,7 +59,7 @@ const BlogPage = () => {
       date: '2024-01-05',
       category: 'Business',
       readTime: '7 min read',
-      image: '/src/assets/images/intelligent-workflow.svg',
+      image: '/images/intelligent-workflow.svg',
       tags: ['Economics', 'ROI', 'Cost Analysis', 'Business']
     },
     {
@@ -70,7 +70,7 @@ const BlogPage = () => {
       date: '2024-01-03',
       category: 'Emergency Care',
       readTime: '5 min read',
-      image: '/src/assets/images/advanced-discovery.svg',
+      image: '/images/advanced-discovery.svg',
       tags: ['Emergency', '24/7 Coverage', 'Urgent Care', 'Critical Care']
     }
   ]

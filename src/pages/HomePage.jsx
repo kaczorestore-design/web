@@ -109,7 +109,7 @@ const HomePage = () => {
         {/* Background Banner */}
         <div className="absolute inset-0 bg-gradient-to-r from-primary-600/10 via-medical-500/5 to-primary-400/10"></div>
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90" style={{backgroundImage: 'url(/src/assets/images/teleradiology-banner.webp)'}}></div>
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90" style={{backgroundImage: 'url(/images/teleradiology-banner.webp)'}}></div>
         <div className="container-custom section-padding relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -276,7 +276,7 @@ const HomePage = () => {
       <section className="section-padding relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
         {/* Background Image with Transparency */}
         <div className="absolute inset-0 opacity-70" style={{
-          backgroundImage: `url('/src/assets/images/Network.png')`,
+          backgroundImage: `url('/images/Network.png')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -299,7 +299,7 @@ const HomePage = () => {
                   <line x1="50" y1="0" x2="50" y2="100" stroke="white" strokeWidth="0.5" opacity="0.2"/>
                 </pattern>
               </defs>
-              <rect width="100%" height="100%" fill="url(/src/assets/images/Network.png)"/>
+              <rect width="100%" height="100%" fill="url(/images/Network.png)"/>
             </svg>
           </div>
         </div>

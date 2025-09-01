@@ -123,7 +123,7 @@ const Enhanced3DReporting = () => {
               className="relative"
             >
               <img
-                src="/src/assets/images/3d-brain-scan.svg"
+                src="/images/3d-brain-scan.svg"
                 alt="3D medical imaging"
                 className="rounded-2xl shadow-2xl"
               />
@@ -275,7 +275,7 @@ const Enhanced3DReporting = () => {
               viewport={{ once: true }}
             >
               <img
-                src="/src/assets/images/3d-brain-scan.svg"
+                src="/images/3d-brain-scan.svg"
                 alt="3D medical visualization"
                 className="rounded-2xl shadow-xl"
               />

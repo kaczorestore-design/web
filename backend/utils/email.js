@@ -249,11 +249,11 @@ const sendEmail = async (options) => {
     
     const result = await transporter.sendMail(mailOptions)
     
-    console.log('Email sent successfully:', {
-      messageId: result.messageId,
-      to: options.to,
-      subject: options.subject
-    })
+    // console.log('Email sent successfully:', {
+    //   messageId: result.messageId,
+    //   to: options.to,
+    //   subject: options.subject
+    // })
     
     return {
       success: true,
@@ -354,18 +354,6 @@ const sendWelcomeEmail = async (user) => {
 }
 
 // Test email configuration
-const testEmailConfig = async () => {
-  try {
-    const transporter = createTransporter()
-    await transporter.verify()
-    console.log('Email configuration is valid')
-    return true
-  } catch (error) {
-    console.error('Email configuration error:', error)
-    return false
-  }
-}
-
 module.exports = {
   sendEmail,
   sendTemplatedEmail,
@@ -374,6 +362,5 @@ module.exports = {
   sendContactNotificationEmail,
   sendContactConfirmationEmail,
   sendWelcomeEmail,
-  testEmailConfig,
   emailTemplates
 }

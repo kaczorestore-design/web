@@ -146,7 +146,7 @@ const QualityAssurance = () => {
               className="relative"
             >
               <img
-                src="/src/assets/images/quality-assurance.svg"
+                src="/images/quality-assurance.svg"
                 alt="Quality assurance in radiology"
                 className="rounded-2xl shadow-2xl"
               />
@@ -301,7 +301,7 @@ const QualityAssurance = () => {
               viewport={{ once: true }}
             >
               <img
-                src="/src/assets/images/quality-assurance.svg"
+                src="/images/quality-assurance.svg"
                 alt="Quality assurance process"
                 className="rounded-2xl shadow-xl"
               />

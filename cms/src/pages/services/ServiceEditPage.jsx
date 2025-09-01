@@ -108,7 +108,7 @@ const ServiceEditPage = () => {
     
     // Simulate API call
     setTimeout(() => {
-      console.log('Updating service:', formData)
+      // console.log('Updating service:', formData)
       setSaving(false)
       navigate('/services')
     }, 1000)
@@ -120,7 +120,7 @@ const ServiceEditPage = () => {
       
       // Simulate API call
       setTimeout(() => {
-        console.log('Deleting service:', id)
+        // console.log('Deleting service:', id)
         setSaving(false)
         navigate('/services')
       }, 1000)

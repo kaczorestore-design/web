@@ -193,7 +193,7 @@ const ExpertConsultation = () => {
               className="relative"
             >
               <img
-                src="/src/assets/images/expert-consultation.svg"
+                src="/images/expert-consultation.svg"
                 alt="Expert consultation"
                 className="rounded-2xl shadow-2xl"
               />
@@ -439,7 +439,7 @@ const ExpertConsultation = () => {
               viewport={{ once: true }}
             >
               <img
-                src="/src/assets/images/expert-consultation.svg"
+                src="/images/expert-consultation.svg"
                 alt="Expert consultation benefits"
                 className="rounded-2xl shadow-xl"
               />

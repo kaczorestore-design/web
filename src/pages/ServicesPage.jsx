@@ -1,8 +1,15 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { Brain, Monitor, Stethoscope, Clock, Shield, Zap, ArrowRight, Moon, Eye, Award, AlertCircle, Users, Workflow, Search } from 'lucide-react'
+import ConsultationPopup from '../components/ConsultationPopup'
 
 const ServicesPage = () => {
+  const [isConsultationPopupOpen, setIsConsultationPopupOpen] = useState(false)
+
+  const openConsultationPopup = () => setIsConsultationPopupOpen(true)
+  const closeConsultationPopup = () => setIsConsultationPopupOpen(false)
+
   const services = [
     {
       icon: Brain,
@@ -255,12 +262,22 @@ const ServicesPage = () => {
               Contact us today to learn how our AI-enhanced teleradiology services 
               can improve your patient care and operational efficiency.
             </p>
-            <button className="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
-              Get Started
+            <button 
+              onClick={openConsultationPopup}
+              className="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 inline-flex items-center space-x-2"
+            >
+              <span>Get Started</span>
+              <ArrowRight className="w-5 h-5" />
             </button>
           </motion.div>
         </div>
       </section>
+      
+      {/* Consultation Popup */}
+      <ConsultationPopup 
+        isOpen={isConsultationPopupOpen} 
+        onClose={closeConsultationPopup} 
+      />
     </div>
   )
 }
