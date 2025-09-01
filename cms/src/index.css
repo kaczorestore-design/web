@@ -1,0 +1,446 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom CSS Variables */
+:root {
+  --color-primary: #3b82f6;
+  --color-primary-dark: #1d4ed8;
+  --color-secondary: #64748b;
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  --color-background: #f8fafc;
+  --color-surface: #ffffff;
+  --color-border: #e2e8f0;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --border-radius: 0.5rem;
+  --transition: all 0.2s ease-in-out;
+}
+
+/* Dark theme variables */
+[data-theme='dark'] {
+  --color-background: #0f172a;
+  --color-surface: #1e293b;
+  --color-border: #334155;
+}
+
+/* Base styles */
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  
+  body {
+    @apply bg-white text-gray-900;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+  
+  h1 {
+    @apply text-3xl lg:text-4xl;
+  }
+  
+  h2 {
+    @apply text-2xl lg:text-3xl;
+  }
+  
+  h3 {
+    @apply text-xl lg:text-2xl;
+  }
+  
+  h4 {
+    @apply text-lg lg:text-xl;
+  }
+  
+  h5 {
+    @apply text-base lg:text-lg;
+  }
+  
+  h6 {
+    @apply text-sm lg:text-base;
+  }
+}
+
+/* Component styles */
+@layer components {
+  /* Button variants */
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700 active:bg-primary-800;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary-100 text-secondary-900 hover:bg-secondary-200 active:bg-secondary-300;
+  }
+  
+  .btn-success {
+    @apply bg-success-600 text-white hover:bg-success-700 active:bg-success-800;
+  }
+  
+  .btn-warning {
+    @apply bg-warning-600 text-white hover:bg-warning-700 active:bg-warning-800;
+  }
+  
+  .btn-danger {
+    @apply bg-danger-600 text-white hover:bg-danger-700 active:bg-danger-800;
+  }
+  
+  .btn-outline {
+    @apply border border-gray-300 bg-transparent hover:bg-gray-100 hover:text-gray-900;
+  }
+  
+  .btn-ghost {
+    @apply hover:bg-gray-100 hover:text-gray-900;
+  }
+  
+  .btn-sm {
+    @apply h-8 px-3 text-xs;
+  }
+  
+  .btn-md {
+    @apply h-10 px-4 py-2;
+  }
+  
+  .btn-lg {
+    @apply h-12 px-8 text-base;
+  }
+  
+  /* Input styles */
+  .input {
+    @apply flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  
+  .input-error {
+    @apply border-danger-500 focus-visible:ring-danger-500;
+  }
+  
+  /* Card styles */
+  .card {
+    @apply rounded-lg border bg-white text-gray-900 shadow-sm;
+  }
+  
+  .card-header {
+    @apply flex flex-col space-y-1.5 p-6;
+  }
+  
+  .card-title {
+    @apply text-lg font-semibold leading-none tracking-tight;
+  }
+  
+  .card-description {
+    @apply text-sm text-gray-600;
+  }
+  
+  .card-content {
+    @apply p-6 pt-0;
+  }
+  
+  .card-footer {
+    @apply flex items-center p-6 pt-0;
+  }
+  
+  /* Badge styles */
+  .badge {
+    @apply inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+  
+  .badge-default {
+    @apply border-transparent bg-blue-600 text-white hover:bg-blue-700;
+  }
+  
+  .badge-secondary {
+    @apply border-transparent bg-gray-600 text-white hover:bg-gray-700;
+  }
+  
+  .badge-success {
+    @apply border-transparent bg-success-100 text-success-800;
+  }
+  
+  .badge-warning {
+    @apply border-transparent bg-warning-100 text-warning-800;
+  }
+  
+  .badge-danger {
+    @apply border-transparent bg-danger-100 text-danger-800;
+  }
+  
+  .badge-outline {
+    @apply text-gray-900;
+  }
+  
+  /* Table styles */
+  .table {
+    @apply w-full caption-bottom text-sm;
+  }
+  
+  .table-header {
+    @apply border-b;
+  }
+  
+  .table-body {
+    @apply [&_tr:last-child]:border-0;
+  }
+  
+  .table-footer {
+    @apply border-t bg-gray-50 font-medium;
+  }
+  
+  .table-row {
+    @apply border-b transition-colors hover:bg-gray-50;
+  }
+  
+  .table-head {
+    @apply h-12 px-4 text-left align-middle font-medium text-gray-600;
+  }
+  
+  .table-cell {
+    @apply p-4 align-middle;
+  }
+  
+  /* Loading spinner */
+  .spinner {
+    @apply animate-spin rounded-full border-2 border-gray-300 border-t-primary-600;
+  }
+  
+  /* Custom scrollbar */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 #f1f5f9;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 3px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+}
+
+/* Utility classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .animate-in {
+    animation-name: enter;
+    animation-duration: var(--animate-enter, 150ms);
+    --animate-enter-opacity: initial;
+    --animate-enter-scale: initial;
+    --animate-enter-rotate: initial;
+    --animate-enter-translate-x: initial;
+    --animate-enter-translate-y: initial;
+  }
+  
+  .animate-out {
+    animation-name: exit;
+    animation-duration: var(--animate-exit, 150ms);
+    --animate-exit-opacity: initial;
+    --animate-exit-scale: initial;
+    --animate-exit-rotate: initial;
+    --animate-exit-translate-x: initial;
+    --animate-exit-translate-y: initial;
+  }
+  
+  .fade-in {
+    --animate-enter-opacity: 0;
+  }
+  
+  .fade-out {
+    --animate-exit-opacity: 0;
+  }
+  
+  .zoom-in {
+    --animate-enter-scale: 0.95;
+  }
+  
+  .zoom-out {
+    --animate-exit-scale: 0.95;
+  }
+  
+  .slide-in-from-top {
+    --animate-enter-translate-y: -0.5rem;
+  }
+  
+  .slide-in-from-bottom {
+    --animate-enter-translate-y: 0.5rem;
+  }
+  
+  .slide-in-from-left {
+    --animate-enter-translate-x: -0.5rem;
+  }
+  
+  .slide-in-from-right {
+    --animate-enter-translate-x: 0.5rem;
+  }
+  
+  .slide-out-to-top {
+    --animate-exit-translate-y: -0.5rem;
+  }
+  
+  .slide-out-to-bottom {
+    --animate-exit-translate-y: 0.5rem;
+  }
+  
+  .slide-out-to-left {
+    --animate-exit-translate-x: -0.5rem;
+  }
+  
+  .slide-out-to-right {
+    --animate-exit-translate-x: 0.5rem;
+  }
+}
+
+/* Keyframes */
+@keyframes enter {
+  from {
+    opacity: var(--animate-enter-opacity, 1);
+    transform: translate3d(
+      var(--animate-enter-translate-x, 0),
+      var(--animate-enter-translate-y, 0),
+      0
+    )
+    scale3d(
+      var(--animate-enter-scale, 1),
+      var(--animate-enter-scale, 1),
+      var(--animate-enter-scale, 1)
+    )
+    rotate(var(--animate-enter-rotate, 0));
+  }
+}
+
+@keyframes exit {
+  to {
+    opacity: var(--animate-exit-opacity, 1);
+    transform: translate3d(
+      var(--animate-exit-translate-x, 0),
+      var(--animate-exit-translate-y, 0),
+      0
+    )
+    scale3d(
+      var(--animate-exit-scale, 1),
+      var(--animate-exit-scale, 1),
+      var(--animate-exit-scale, 1)
+    )
+    rotate(var(--animate-exit-rotate, 0));
+  }
+}
+
+/* Quill Editor Customization */
+.ql-editor {
+  @apply min-h-[200px] text-sm;
+}
+
+.ql-toolbar {
+  @apply border-t border-l border-r border-gray-300 rounded-t-md;
+}
+
+.ql-container {
+  @apply border-b border-l border-r border-gray-300 rounded-b-md;
+}
+
+/* React Datepicker Customization */
+.react-datepicker-wrapper {
+  @apply w-full;
+}
+
+.react-datepicker__input-container input {
+  @apply input;
+}
+
+/* React Select Customization */
+.react-select__control {
+  @apply border-gray-300 hover:border-gray-400 focus:border-primary-500 focus:ring-1 focus:ring-primary-500;
+}
+
+.react-select__control--is-focused {
+  @apply border-primary-500 ring-1 ring-primary-500 shadow-sm;
+}
+
+.react-select__menu {
+  @apply border border-gray-300 shadow-lg;
+}
+
+.react-select__option {
+  @apply text-sm;
+}
+
+.react-select__option--is-focused {
+  @apply bg-primary-50 text-primary-900;
+}
+
+.react-select__option--is-selected {
+  @apply bg-primary-600 text-white;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-break-before {
+    page-break-before: always;
+  }
+  
+  .print-break-after {
+    page-break-after: always;
+  }
+  
+  .print-break-inside-avoid {
+    page-break-inside: avoid;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus visible for better accessibility */
+.focus-visible:focus-visible {
+  @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .btn {
+    @apply border-2;
+  }
+  
+  .input {
+    @apply border-2;
+  }
+  
+  .card {
+    @apply border-2;
+  }
+}
